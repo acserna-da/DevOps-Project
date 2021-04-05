@@ -505,7 +505,7 @@ jobs:
             aws cloudformation deploy \
               --template-file .circleci/files/cloudfront.yml \
               --tags project=udapeople \
-              --stack-name udapeople-${PreviousWorkflowID} \
+              --stack-name udapeople-production \
               --parameter-overrides WorkflowID="${CIRCLE_WORKFLOW_ID:0:7}"}
       - persist_to_workspace:
           root: ~/
