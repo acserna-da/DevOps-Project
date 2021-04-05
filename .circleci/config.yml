@@ -478,7 +478,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            yum install -y nodejs curl
+            yum install -y nodejs curl tar
       - run:
           name: Store PreviousWorkflowID
           command: |
@@ -528,7 +528,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            yum install -y nodejs
+            yum install -y nodejs tar
       - run:
           name: Get old stack workflow id
           command: |
