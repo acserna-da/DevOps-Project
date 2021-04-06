@@ -345,11 +345,12 @@ jobs:
             echo "${API_URL}"
             pwd
             ls
-            echo "${API_URL}" > ~/project/frontend/.env
+            echo "API_URL=${API_URL}" > ~/project/frontend/.env
             cat ~/project/frontend/.env
       - run:
           name: Deploy frontend objects
           command: |
+            cat ~/project/frontend/.env
             cd frontend
             npm i
             npm install oauth2
